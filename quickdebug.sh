@@ -1,3 +1,11 @@
+#!/bin/sh
+#
+# Quick and dirty script to read out some Sophos Firewall settings
+# Should work with every SFOS >V19
+# This script is delivered "as is" - use with care and own risk
+#
+# Usage: sh ./quickdebug.sh
+#
 echo -e "\n" >quickdebug.txt
 cish -c "show date" >>quickdebug.txt
 echo -e "\n" >>quickdebug.txt
