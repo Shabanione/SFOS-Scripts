@@ -27,4 +27,6 @@ cish -c "system auto-reboot-on-hang show" >>quickdebug.txt
 cish -c "show advanced-firewall" >>quickdebug.txt
 echo "# IPS settings" >>quickdebug.txt
 cish -c "show ips-settings" >>quickdebug.txt
+# Cleanup
+rm verinf.txt
 less quickdebug.txt
