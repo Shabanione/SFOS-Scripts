@@ -6,10 +6,10 @@
 #
 # Usage: sh ./quickdebug.sh
 #
-cish -c "show date" >>quickdebug.txt
+cish -c "show date" >quickdebug.txt
 echo "# Version Info" >>quickdebug.txt
 cish -c "system diagnostics show version-info" >verinf.txt && cat verinf.txt >>quickdebug.txt
-echo "# Routing and SD-WAN Settings"  >>quickdebug.txt
+echo "# Routing and SD-WAN Settings" >>quickdebug.txt
 cish -c "system route_precedence show" >>quickdebug.txt
 cish -c "show routing sd-wan-policy-route reply-packet" >>quickdebug.txt
 cish -c "show routing sd-wan-policy-route system-generate-traffic" >>quickdebug.txt
