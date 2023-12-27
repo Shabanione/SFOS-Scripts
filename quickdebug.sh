@@ -22,13 +22,12 @@ connremovestat=$(cish -c "show vpn conn-remove-tunnel-up") && echo "vpn conn-rem
 echo "# (un)loaded system modules" >>quickdebug.txt
 cish -c "system system_modules show" >>quickdebug.txt
 echo "# Firewall General Setting"  >>quickdebug.txt
+cish -c "show ips-settings" >>quickdebug.txt
 cish -c "system firewall-acceleration show" >>quickdebug.txt
-cish -c "system pki-acceleration show" >>quickdebug.txt
 cish -c "system ipsec-acceleration show" >>quickdebug.txt
 cish -c "system auto-reboot-on-hang show" >>quickdebug.txt
 cish -c "show advanced-firewall" >>quickdebug.txt
 echo "# IPS settings" >>quickdebug.txt
-cish -c "show ips-settings" >>quickdebug.txt
 # Cleanup
 rm verinf.txt
 less quickdebug.txt
