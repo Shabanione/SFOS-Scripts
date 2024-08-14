@@ -3,6 +3,7 @@
 # Quick and dirty script to read out some Sophos Firewall settings
 # Should work with every SFOS >V19
 # This script is delivered "as is" - use with care and own risk
+# Last update: 2024-08-14 (added Installation history)
 #
 # Usage: sh ./quickdebug.sh
 #
@@ -28,6 +29,8 @@ cish -c "system firewall-acceleration show" >>quickdebug.txt
 cish -c "system ipsec-acceleration show" >>quickdebug.txt
 cish -c "system auto-reboot-on-hang show" >>quickdebug.txt
 cish -c "show advanced-firewall" >>quickdebug.txt
+echo "# Installation / Firmware History" >>quickdebug.txt
+grep -i 'kernel command line: boot_image' /log/syslog.log >>quickdebug.txt
 # Cleanup
 rm verinf.txt
 less quickdebug.txt
