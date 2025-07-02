@@ -5,6 +5,9 @@
 # This script is delivered "as is" - use with care and own risk
 # Last update: 2025-07-02 (added DHCP lease generation method)
 #
+# BTW: Most system console commands are described in the docs
+# https://docs.sophos.com/nsg/sophos-firewall/21.5/help/en-us/webhelp/onlinehelp/CommandLineHelp/DeviceConsole/index.html
+#
 # Usage: sh ./quickdebug.sh
 #
 cish -c "show date" >quickdebug.txt
