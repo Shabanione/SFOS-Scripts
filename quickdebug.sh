@@ -28,7 +28,7 @@ cish -c "system system_modules show" >>quickdebug.txt
 echo "# DHCP Lease Generation.'old' might be troublesome, new appliances have 'global' as default" >>quickdebug.txt
 echo "# Also see Sophos KBA-000004069" >>quickdebug.txt
 cish -c "system dhcp static-entry-scope show" >>quickdebug.txt
-echo " " >>quickdebug.txt
+echo "\n" >>quickdebug.txt
 echo "# IPS settings" >>quickdebug.txt
 cish -c "show ips-settings" >>quickdebug.txt
 echo "# Firewall General Setting"  >>quickdebug.txt
