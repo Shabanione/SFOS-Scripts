@@ -38,6 +38,7 @@ cish -c "system auto-reboot-on-hang show" >>quickdebug.txt
 cish -c "show advanced-firewall" >>quickdebug.txt
 echo "# Installation / Firmware History" >>quickdebug.txt
 grep -i 'kernel command line: boot_image' /log/syslog.log >>quickdebug.txt
+echo -e "\n" >>quickdebug.txt
 echo "# Disk and Partitions usage" >>quickdebug.txt
 df -h >>quickdebug.txt
 # Cleanup
