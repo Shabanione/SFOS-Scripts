@@ -3,7 +3,7 @@
 # Quick and dirty script to read out some Sophos Firewall settings
 # Should work with every SFOS >V19
 # This script is delivered "as is" - use with care and own risk
-# Last update: 2025-07-02 (added DHCP lease generation method)
+# Last update: 2025-07-16 (added disk and partitions usage)
 #
 # BTW: Most system console commands are described in the docs
 # https://docs.sophos.com/nsg/sophos-firewall/21.5/help/en-us/webhelp/onlinehelp/CommandLineHelp/DeviceConsole/index.html
@@ -38,6 +38,8 @@ cish -c "system auto-reboot-on-hang show" >>quickdebug.txt
 cish -c "show advanced-firewall" >>quickdebug.txt
 echo "# Installation / Firmware History" >>quickdebug.txt
 grep -i 'kernel command line: boot_image' /log/syslog.log >>quickdebug.txt
+echo "# Disk and Partitions usage" >>quickdebug.txt
+df -h >>quickdebug.txt
 # Cleanup
 rm verinf.txt
 less quickdebug.txt
